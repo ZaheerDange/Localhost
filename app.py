@@ -118,6 +118,8 @@ technique = st.sidebar.selectbox(
     [
         "Home",
         # Data Mining
+        "Practical 4: Data Preprocessing and Cleaning",
+        "Practical 5: Data Discretization and Visualization",
         "ID3",
         "J48",
         "Naive Bayes",
@@ -201,6 +203,147 @@ if technique == "Home":
         st.success("🗺️ **Practical 9**\n\nDijkstra's Algorithm\n\n*Greedy Single-Source Shortest Path*")
         st.success("🔍 **Practical 10**\n\nSearching Techniques\n\n*Linear, Binary, Interpolation Search*")
         st.success("🎄 **Practical 11**\n\nAVL Tree\n\n*Self-Balancing BST, LL/RR Rotations*")
+
+
+
+# =========================================================
+# PRACTICAL 4: DATA PREPROCESSING AND CLEANING
+# =========================================================
+
+elif technique == "Practical 4: Data Preprocessing and Cleaning":
+
+    st.header("🧹 Practical 04: Data Preprocessing and Cleaning")
+
+    st.write(
+        """
+        Data preprocessing and cleaning prepare raw, noisy, or incomplete datasets for effective
+        data mining and machine learning. This practical covers **Dataset Exploration**,
+        **Missing Value Handling & Normalization**, and **Categorical Encoding**.
+        """
+    )
+
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "Part A: Dataset Exploration",
+        "Part B: Data Cleaning",
+        "Part C: Data Transformation",
+        "Complete Practical Code"
+    ])
+
+    with tab1:
+        st.code(load_code("dm_prac4_part_a.py"), language="python")
+        st.subheader("📋 Output Highlights")
+        st.code(
+            """======================================================================
+               EMPLOYEE ANALYTICS DATASET
+======================================================================
+Dimensions: 15 Rows, 12 Columns
+Missing Values detected in: Age, Salary, Experience, Performance, Location
+Data Types: int64, float64, object""",
+            language="text"
+        )
+        st.info("• Exploration inspects dataset shape, null presence, attribute datatypes, and summary statistics.")
+
+    with tab2:
+        st.code(load_code("dm_prac4_part_b.py"), language="python")
+        st.subheader("📋 Output Highlights")
+        st.code(
+            """Handling Missing Values:
+• Age -> Median imputation
+• Salary -> Mean imputation
+• Experience -> Median imputation
+• Performance -> Mean imputation
+• Location -> Mode imputation
+Duplicates Removed: 1 duplicate record dropped
+Standardized Gender: ['Male', 'Female']
+Standardized Departments: ['IT', 'HR', 'Finance', 'Marketing']""",
+            language="text"
+        )
+        st.info("• Statistical imputation prevents data loss compared to dropping records.")
+
+    with tab3:
+        st.code(load_code("dm_prac4_part_c.py"), language="python")
+        st.subheader("📋 Output Highlights")
+        st.code(
+            """Label Encoding Applied to:
+['Gender', 'Department', 'Designation', 'Employment_Type', 'Location']
+
+Min-Max Scaling [0, 1] Applied to:
+['Age', 'Salary', 'Experience', 'Performance', 'Training_Hours']
+Formula: X_scaled = (X - X_min) / (X_max - X_min)
+Processed dataset saved as data/Employee_Analytics_Processed.csv""",
+            language="text"
+        )
+        st.info("• Min-Max scaling normalizes numerical scales to [0, 1] to prevent dominant feature bias.")
+
+    with tab4:
+        st.code(load_code("dm_prac4.py"), language="python")
+
+
+# =========================================================
+# PRACTICAL 5: DATA DISCRETIZATION AND VISUALIZATION
+# =========================================================
+
+elif technique == "Practical 5: Data Discretization and Visualization":
+
+    st.header("📊 Practical 05: Data Discretization and Visualization")
+
+    st.write(
+        """
+        Data Discretization transforms continuous numeric attributes into discrete intervals
+        (bins) to enhance interpretability and classification efficiency. Data Visualization
+        provides graphical insights into patterns and distributions.
+        """
+    )
+
+    tab1, tab2, tab3 = st.tabs([
+        "Part A: Data Discretization",
+        "Part B: Data Visualization",
+        "Complete Practical Code"
+    ])
+
+    with tab1:
+        st.code(load_code("dm_prac5_part_a.py"), language="python")
+        st.subheader("📋 Discretization Rules Applied (`pd.cut`)")
+        st.code(
+            """• Age -> Young [20-30], Adult [30-40], Senior [40-60]
+• Salary -> Low [4L-8L], Medium [8L-9L], High [9L+]
+• Experience -> Beginner [0-2], Intermediate [2-5], Experienced [5-10], Expert [10+]
+• Performance -> Poor [0-2], Average [2-3.5], Good [3.5-4.5], Excellent [4.5-5]
+• Training Hours -> Low [0-20], Medium [20-40], High [40-60], Very High [60+]""",
+            language="text"
+        )
+        st.info("• Equal-width binning converts continuous variables into meaningful categorical buckets.")
+
+    with tab2:
+        st.code(load_code("dm_prac5_part_b.py"), language="python")
+        st.subheader("📊 Visualizations (Bar Chart, Histogram, Pie Chart, Boxplot)")
+        import matplotlib.pyplot as plt
+        import pandas as pd
+        data_path = os.path.join(BASE_DIR, "data", "Employee_Analytics.csv")
+        if os.path.exists(data_path):
+            sample_df = pd.read_csv(data_path)
+            sample_df['Age_Category'] = pd.cut(sample_df['Age'].fillna(sample_df['Age'].median()), bins=[20, 30, 40, 60], labels=['Young', 'Adult', 'Senior'])
+            sample_df['Performance_Category'] = pd.cut(sample_df['Performance'].fillna(sample_df['Performance'].mean()), bins=[0, 2, 3.5, 4.5, 5], labels=['Poor', 'Average', 'Good', 'Excellent'])
+            
+            vcol1, vcol2 = st.columns(2)
+            with vcol1:
+                fig1, ax1 = plt.subplots(figsize=(5, 3.5))
+                sample_df['Age_Category'].value_counts().plot(kind='bar', ax=ax1, color='#ff6b6b')
+                ax1.set_title("Age Category Distribution", color='white')
+                ax1.tick_params(colors='white')
+                fig1.patch.set_facecolor('#241215')
+                ax1.set_facecolor('#371f25')
+                st.pyplot(fig1)
+            
+            with vcol2:
+                fig2, ax2 = plt.subplots(figsize=(5, 3.5))
+                sample_df['Performance_Category'].value_counts().plot(kind='pie', ax=ax2, autopct='%1.1f%%', textprops={'color':"white"})
+                ax2.set_title("Performance Distribution", color='white')
+                fig2.patch.set_facecolor('#241215')
+                st.pyplot(fig2)
+
+    with tab3:
+        st.code(load_code("dm_prac5.py"), language="python")
 
 
 # =========================================================
