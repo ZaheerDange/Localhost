@@ -21,44 +21,54 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom Error Theme for Code Blocks ONLY
+# Custom Error-Box Theme for Code Blocks ONLY
 st.markdown(
     """
     <style>
-    /* Error-style background and red text for Code Blocks ONLY */
+    /* Code block styled exactly like Streamlit error/exception box */
     [data-testid="stCodeBlock"] {
-        background-color: #2b0b0e !important;
-        border: 1.5px solid #dc3545 !important;
+        background-color: #371f25 !important;
+        border: 1px solid rgba(255, 75, 75, 0.25) !important;
         border-radius: 8px !important;
-        box-shadow: 0 0 15px rgba(220, 53, 69, 0.25) !important;
+        padding: 12px !important;
+        box-shadow: none !important;
     }
 
     [data-testid="stCodeBlock"] pre {
-        background-color: #2b0b0e !important;
+        background-color: #241215 !important;
+        border: 1px solid rgba(255, 75, 75, 0.2) !important;
+        border-radius: 6px !important;
+        padding: 14px 16px !important;
+        margin: 0 !important;
     }
 
     [data-testid="stCodeBlock"] code,
-    [data-testid="stCodeBlock"] code span,
+    [data-testid="stCodeBlock"] code *,
     [data-testid="stCodeBlock"] pre code,
     [data-testid="stCodeBlock"] pre code span {
-        color: #ff4d4f !important;
-        -webkit-text-fill-color: #ff4d4f !important;
+        color: #ff8282 !important;
+        -webkit-text-fill-color: #ff8282 !important;
+        font-family: 'Source Code Pro', Consolas, Monaco, monospace !important;
     }
 
     /* Copy button inside code block */
     [data-testid="stCodeBlock"] button {
-        color: #ff7875 !important;
+        color: #ff8282 !important;
+        background: transparent !important;
+        border: none !important;
     }
     [data-testid="stCodeBlock"] button:hover {
         color: #ff4d4f !important;
-        background-color: #441116 !important;
+        background-color: rgba(255, 75, 75, 0.15) !important;
     }
 
     /* Inline code badges */
     code:not(pre code) {
-        background-color: #3b0e12 !important;
-        color: #ff4d4f !important;
-        border: 1px solid #78151c !important;
+        background-color: #371f25 !important;
+        color: #ff8282 !important;
+        border: 1px solid rgba(255, 75, 75, 0.25) !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
     }
     </style>
     """,
