@@ -26,14 +26,20 @@ st.markdown(
     """
     <style>
     /* Code block styled exactly like Streamlit error/exception box */
+    [data-testid="stCode"],
+    .stCode,
     [data-testid="stCodeBlock"] {
         background-color: #371f25 !important;
         border: 1px solid rgba(255, 75, 75, 0.25) !important;
         border-radius: 8px !important;
-        padding: 12px !important;
+        padding: 10px !important;
         box-shadow: none !important;
     }
 
+    [data-testid="stCode"] > div,
+    [data-testid="stCode"] pre,
+    .stCode > div,
+    .stCode pre,
     [data-testid="stCodeBlock"] pre {
         background-color: #241215 !important;
         border: 1px solid rgba(255, 75, 75, 0.2) !important;
@@ -42,6 +48,12 @@ st.markdown(
         margin: 0 !important;
     }
 
+    [data-testid="stCode"] *,
+    .stCode *,
+    [data-testid="stCode"] code,
+    [data-testid="stCode"] span,
+    .stCode code,
+    .stCode span,
     [data-testid="stCodeBlock"] code,
     [data-testid="stCodeBlock"] code *,
     [data-testid="stCodeBlock"] pre code,
@@ -52,11 +64,15 @@ st.markdown(
     }
 
     /* Copy button inside code block */
+    [data-testid="stCode"] button,
+    .stCode button,
     [data-testid="stCodeBlock"] button {
         color: #ff8282 !important;
         background: transparent !important;
         border: none !important;
     }
+    [data-testid="stCode"] button:hover,
+    .stCode button:hover,
     [data-testid="stCodeBlock"] button:hover {
         color: #ff4d4f !important;
         background-color: rgba(255, 75, 75, 0.15) !important;
