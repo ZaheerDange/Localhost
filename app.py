@@ -16,7 +16,7 @@ def load_code(filename):
 # =========================================================
 
 st.set_page_config(
-    page_title="Student Data Mining & DAA Practical System",
+    page_title="Student Data Mining System",
     page_icon="🎓",
     layout="wide"
 )
@@ -96,22 +96,22 @@ st.markdown(
 # PROJECT TITLE
 # =========================================================
 
-st.title("🎓 Student Intelligence, Data Mining & DAA Practical Portal")
+st.title("🎓 Student Intelligence and Learning Analytics System")
 
 st.write(
     """
-    This project demonstrates different **Data Mining techniques**
-    and **Design & Analysis of Algorithms (DAA) Practicals**
-    with complete source codes, execution outputs, and theoretical concepts.
+    This project demonstrates different Data Mining techniques
+    using student academic, learning, feedback, web, multimedia
+    and spatial data.
     """
 )
 
 
 # =========================================================
-# SIDEBAR NAVIGATION (SAME SLIDER)
+# SIDEBAR
 # =========================================================
 
-st.sidebar.title("📊 Practical Lab Portal")
+st.sidebar.title("📊 Data Mining Techniques")
 
 technique = st.sidebar.selectbox(
     "Select Technique",
@@ -157,12 +157,12 @@ if technique == "Home":
 
     st.write(
         """
-        The system covers both **Data Mining Techniques** and **Design & Analysis of Algorithms (DAA)** practicals
-        accessible from the sidebar dropdown slider.
+        The system applies different Data Mining techniques
+        to solve different types of problems in education.
         """
     )
 
-    st.subheader("📚 1. Data Mining Techniques")
+    st.subheader("📚 Techniques Covered")
 
     col1, col2, col3 = st.columns(3)
 
@@ -1307,6 +1307,10 @@ elif technique == "DAA Practical 11: AVL Tree Implementation & Rotations":
 
 st.sidebar.markdown("---")
 
-st.sidebar.write("🎓 Practical Lab Portal")
-st.sidebar.write("Data Mining + Design & Analysis of Algorithms")
-st.sidebar.write("Python + Pandas + Scikit-learn + Streamlit")
+st.sidebar.write(
+    "🎓 Student Data Mining Project"
+)
+
+st.sidebar.write(
+    "Python + Pandas + Scikit-learn + Streamlit"
+)
