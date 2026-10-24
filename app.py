@@ -219,7 +219,6 @@ elif technique == "ID3":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/id3.py`)")
     st.code(load_code("id3.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -256,7 +255,6 @@ elif technique == "J48":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/j48.py`)")
     st.code(load_code("j48.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -288,7 +286,6 @@ elif technique == "Naive Bayes":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/naive_bayes.py`)")
     st.code(load_code("naive_bayes.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -318,7 +315,6 @@ elif technique == "Decision Tree":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/decision_tree.py`)")
     st.code(load_code("decision_tree.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -347,7 +343,6 @@ elif technique == "K-NN":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/knn.py`)")
     st.code(load_code("knn.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -377,7 +372,6 @@ elif technique == "K-Means":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/kmeans.py`)")
     st.code(load_code("kmeans.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -407,7 +401,6 @@ elif technique == "Apriori":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/apriori.py`)")
     st.code(load_code("apriori.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -437,7 +430,6 @@ elif technique == "Text Mining":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/text_mining.py`)")
     st.code(load_code("text_mining.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -467,7 +459,6 @@ elif technique == "Web Mining":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/web_mining.py`)")
     st.code(load_code("web_mining.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -502,7 +493,6 @@ elif technique == "Multimedia Mining":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/multimedia_mining.py`)")
     st.code(load_code("multimedia_mining.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -532,7 +522,6 @@ elif technique == "Spatial Mining":
         """
     )
 
-    st.subheader("💻 Python Source Code (`modules/spatial_mining.py`)")
     st.code(load_code("spatial_mining.py"), language="python")
 
     st.subheader("💡 What did we learn?")
@@ -569,7 +558,6 @@ elif technique == "DAA Practical 1: Time Complexity (Step Counting)":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac1_max.py`)")
         st.code(load_code("daa/prac1_max.py"), language="python")
 
         st.subheader("📋 Output")
@@ -590,7 +578,6 @@ elif technique == "DAA Practical 1: Time Complexity (Step Counting)":
         )
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac1_fact.py`)")
         st.code(load_code("daa/prac1_fact.py"), language="python")
 
         st.subheader("📋 Output")
@@ -609,7 +596,6 @@ elif technique == "DAA Practical 1: Time Complexity (Step Counting)":
         )
 
     with tab3:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac1_step_count.py`)")
         st.code(load_code("daa/prac1_step_count.py"), language="python")
 
 
@@ -638,28 +624,24 @@ elif technique == "DAA Practical 2: Sorting Algorithms (Bubble, Insertion, Merge
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac2_bubble.py`)")
         st.code(load_code("daa/prac2_bubble.py"), language="python")
         st.subheader("📋 Output")
         st.code("Sorted List: [1, 2, 3, 5, 8]", language="text")
         st.info("• **Logic**: Repeatedly swaps adjacent elements if out of order.\n• **Worst/Average Time**: $\\mathcal{O}(n^2)$\n• **Space**: $\\mathcal{O}(1)$ in-place.")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac2_insertion.py`)")
         st.code(load_code("daa/prac2_insertion.py"), language="python")
         st.subheader("📋 Output")
         st.code("Sorted List: [1, 2, 3, 5, 8]", language="text")
         st.info("• **Logic**: Inserts current key into its sorted position by shifting elements.\n• **Worst/Average Time**: $\\mathcal{O}(n^2)$\n• **Best Time**: $\\mathcal{O}(n)$ (already sorted).")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac2_merge.py`)")
         st.code(load_code("daa/prac2_merge.py"), language="python")
         st.subheader("📋 Output")
         st.code("Sorted List: [1, 2, 3, 5, 8]", language="text")
         st.info("• **Logic**: Divide and Conquer — divides array in halves, sorts, and merges.\n• **Time Complexity**: $\\mathcal{O}(n \\log n)$ in all cases!\n• **Space**: $\\mathcal{O}(n)$ auxiliary.")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac2_compare.py`)")
         st.code(load_code("daa/prac2_compare.py"), language="python")
         st.subheader("📋 Execution Benchmark Results")
         st.code(
@@ -682,7 +664,6 @@ Merge Time: 0.00192 sec""",
         st.info("Merge Sort ($\\mathcal{O}(n \\log n)$) scales significantly faster than $\\mathcal{O}(n^2)$ sorting as $n$ increases.")
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac2_sorting.py`)")
         st.code(load_code("daa/prac2_sorting.py"), language="python")
 
 
@@ -710,35 +691,30 @@ elif technique == "DAA Practical 3: Singly Linked List Operations":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac3_insert_beg.py`)")
         st.code(load_code("daa/prac3_insert_beg.py"), language="python")
         st.subheader("📋 Output")
         st.code("10 -> 20 -> 30 -> None", language="text")
         st.info("• **Operation**: `new.next = head; head = new`\n• **Time Complexity**: $\\mathcal{O}(1)$")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac3_insert_end.py`)")
         st.code(load_code("daa/prac3_insert_end.py"), language="python")
         st.subheader("📋 Output")
         st.code("10 -> 20 -> 30 -> None", language="text")
         st.info("• **Operation**: Traverse to `temp.next is None`, link `temp.next = new`\n• **Time Complexity**: $\\mathcal{O}(n)$")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac3_del_beg.py`)")
         st.code(load_code("daa/prac3_del_beg.py"), language="python")
         st.subheader("📋 Output")
         st.code("20 -> 30 -> None", language="text")
         st.info("• **Operation**: `head = head.next`\n• **Time Complexity**: $\\mathcal{O}(1)$")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac3_search.py`)")
         st.code(load_code("daa/prac3_search.py"), language="python")
         st.subheader("📋 Output (Searching for 20)")
         st.code("Element Found", language="text")
         st.info("• **Operation**: Traverse nodes sequentially comparing `temp.data == key`\n• **Time Complexity**: $\\mathcal{O}(n)$")
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac3_singly_linked_list.py`)")
         st.code(load_code("daa/prac3_singly_linked_list.py"), language="python")
 
 
@@ -766,35 +742,30 @@ elif technique == "DAA Practical 4: Circular Linked List Operations":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac4_insert_beg.py`)")
         st.code(load_code("daa/prac4_insert_beg.py"), language="python")
         st.subheader("📋 Output")
         st.code("5 -> 10 -> 20 -> 30 -> Head", language="text")
         st.info("• Insert 5 at beginning: `new.next = a`, update tail `c.next = new`, `head = new`.")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac4_insert_end.py`)")
         st.code(load_code("daa/prac4_insert_end.py"), language="python")
         st.subheader("📋 Output")
         st.code("10 -> 20 -> 30 -> 40 -> Head", language="text")
         st.info("• Insert 40 at end: `c.next = new`, `new.next = a` (head).")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac4_del_beg.py`)")
         st.code(load_code("daa/prac4_del_beg.py"), language="python")
         st.subheader("📋 Output")
         st.code("20 -> 30 -> Head", language="text")
         st.info("• Delete 10 from beginning: `head = b`, tail updated `c.next = head`.")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac4_del_end.py`)")
         st.code(load_code("daa/prac4_del_end.py"), language="python")
         st.subheader("📋 Output")
         st.code("10 -> 20 -> Head", language="text")
         st.info("• Delete 30 from end: Second-to-last node `b.next = a`.")
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac4_circular_linked_list.py`)")
         st.code(load_code("daa/prac4_circular_linked_list.py"), language="python")
 
 
@@ -823,35 +794,30 @@ elif technique == "DAA Practical 5: Stack & Tower of Hanoi":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac5_array.py`)")
         st.code(load_code("daa/prac5_array.py"), language="python")
         st.subheader("📋 Output")
         st.code("Stack: [10, 20, 30]\nPopped: 30\nTop: 20\nStack: [10, 20]", language="text")
         st.info("• Python `list.append()` and `list.pop()` execute in $\\mathcal{O}(1)$ amortized time.")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac5_ll.py`)")
         st.code(load_code("daa/prac5_ll.py"), language="python")
         st.subheader("📋 Output")
         st.code("10 -> 20 -> 30 -> None\nPopped: 30\n10 -> 20 -> None", language="text")
         st.info("• Nodes are linked at the top pointer for $\\mathcal{O}(1)$ push and pop operations.")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac5_hanoi.py`)")
         st.code(load_code("daa/prac5_hanoi.py"), language="python")
         st.subheader("📋 Output (3 Disks from A to C via B)")
         st.code("A -> C\nA -> B\nC -> B\nA -> C\nB -> A\nB -> C\nA -> C", language="text")
         st.info("• Number of moves for $n$ disks: $2^n - 1$ (For $n=3$, exactly 7 moves).\n• Time Complexity: $\\mathcal{O}(2^n)$.")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac5_underflow.py`)")
         st.code(load_code("daa/prac5_underflow.py"), language="python")
         st.subheader("📋 Output")
         st.code("Stack: [10, 20, 30]\nDeleted: 30\nDeleted: 20\nDeleted: 10\nStack Underflow\nFinal Stack: []", language="text")
         st.info("• Underflow verification prevents program termination when attempting to pop from an empty stack.")
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac5_stack_and_hanoi.py`)")
         st.code(load_code("daa/prac5_stack_and_hanoi.py"), language="python")
 
 
@@ -880,26 +846,22 @@ elif technique == "DAA Practical 6: Balanced Parentheses Checker":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac6_balanced.py`)")
         st.code(load_code("daa/prac6_balanced.py"), language="python")
         st.subheader("📋 Output for `(a+b)*(c-d)`")
         st.code("Balanced", language="text")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac6_unbalanced.py`)")
         st.code(load_code("daa/prac6_unbalanced.py"), language="python")
         st.subheader("📋 Output for `(a+b)*(c-d`")
         st.code("Not Balanced", language="text")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac6_brackets.py`)")
         st.code(load_code("daa/prac6_brackets.py"), language="python")
         st.subheader("📋 Output for `{[()]}`")
         st.code("Balanced", language="text")
         st.info("• Validates curly, square, and round brackets using dictionary mapping.")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac6_multiple.py`)")
         st.code(load_code("daa/prac6_multiple.py"), language="python")
         st.subheader("📋 Output")
         st.code(
@@ -911,7 +873,6 @@ a+b) : Not Balanced""",
         )
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac6_parentheses.py`)")
         st.code(load_code("daa/prac6_parentheses.py"), language="python")
 
 
@@ -940,33 +901,28 @@ elif technique == "DAA Practical 7: Queue Operations (Array, Circular, Deque)":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac7_list.py`)")
         st.code(load_code("daa/prac7_list.py"), language="python")
         st.subheader("📋 Output")
         st.code("Queue: [10, 20, 30]\nDeleted: 10\nQueue: [20, 30]", language="text")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac7_circular.py`)")
         st.code(load_code("daa/prac7_circular.py"), language="python")
         st.subheader("📋 Output")
         st.code("Queue Full\nDeleted: 10\n[40, 20, 30]", language="text")
         st.info("• Eliminates memory wastage in arrays using circular wrapping: `(rear + 1) % size`.")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac7_deque.py`)")
         st.code(load_code("daa/prac7_deque.py"), language="python")
         st.subheader("📋 Output")
         st.code("Queue: [10, 20, 30]\nDeleted: 10\nQueue: [20, 30]", language="text")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac7_compare.py`)")
         st.code(load_code("daa/prac7_compare.py"), language="python")
         st.subheader("📋 Output (10,000 Operations)")
         st.code("List Time: 0.0125 sec\nDeque Time: 0.0018 sec", language="text")
         st.info("• `list.pop(0)` is $\\mathcal{O}(n)$ because remaining elements must shift left.\n• `deque.popleft()` is $\\mathcal{O}(1)$ doubly-linked pointer reassignment.")
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac7_queue.py`)")
         st.code(load_code("daa/prac7_queue.py"), language="python")
 
 
@@ -994,7 +950,6 @@ elif technique == "DAA Practical 8: Graph Representation & Traversals (DFS/BFS)"
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac8_adj.py`)")
         st.code(load_code("daa/prac8_adj.py"), language="python")
         st.subheader("📋 Output")
         st.code(
@@ -1013,21 +968,18 @@ elif technique == "DAA Practical 8: Graph Representation & Traversals (DFS/BFS)"
         st.info("• Adjacency List stores only existing edges ($\\mathcal{O}(V + E)$ space).\n• Adjacency Matrix stores full $V \\times V$ table ($\\mathcal{O}(V^2)$ space).")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac8_dfs.py`)")
         st.code(load_code("daa/prac8_dfs.py"), language="python")
         st.subheader("📋 Traversal Output")
         st.code("DFS Traversal:\n0 1 3 4 2", language="text")
         st.info("• Explores as deep as possible before backtracking.\n• Time Complexity: $\\mathcal{O}(V + E)$.")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac8_bfs.py`)")
         st.code(load_code("daa/prac8_bfs.py"), language="python")
         st.subheader("📋 Traversal Output")
         st.code("BFS Traversal:\n0 1 2 3 4", language="text")
         st.info("• Explores level-by-level using a FIFO queue.\n• Time Complexity: $\\mathcal{O}(V + E)$.")
 
     with tab4:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac8_graph.py`)")
         st.code(load_code("daa/prac8_graph.py"), language="python")
 
 
@@ -1054,7 +1006,6 @@ elif technique == "DAA Practical 9: Dijkstra's Shortest Path Algorithm":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac9_graph.py`)")
         st.code(load_code("daa/prac9_graph.py"), language="python")
         st.subheader("📋 Output")
         st.code(
@@ -1068,13 +1019,11 @@ Shortest Distances: {'A': 0, 'B': 4, 'C': 2, 'D': 3}""",
         st.info("• Path from A to D: A -> C (2) + C -> D (1) = 3.")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac9_vertex.py`)")
         st.code(load_code("daa/prac9_vertex.py"), language="python")
         st.subheader("📋 Output")
         st.code("Shortest Distance to D: 3", language="text")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac9_input.py`)")
         st.code(load_code("daa/prac9_input.py"), language="python")
 
         st.subheader("🎮 Interactive Dijkstra Demonstration")
@@ -1097,7 +1046,6 @@ Shortest Distances: {'A': 0, 'B': 4, 'C': 2, 'D': 3}""",
         st.json(dist)
 
     with tab4:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac9_dijkstra.py`)")
         st.code(load_code("daa/prac9_dijkstra.py"), language="python")
 
 
@@ -1126,28 +1074,24 @@ elif technique == "DAA Practical 10: Searching Techniques (Linear, Binary, Inter
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac10_linear.py`)")
         st.code(load_code("daa/prac10_linear.py"), language="python")
         st.subheader("📋 Output (Searching for 30 in [10, 20, 30, 40, 50])")
         st.code("Found at position 3", language="text")
         st.info("• Sequentially scans all items. Works on unsorted data in $\\mathcal{O}(n)$.")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac10_binary.py`)")
         st.code(load_code("daa/prac10_binary.py"), language="python")
         st.subheader("📋 Output (Searching for 30 in [10, 20, 30, 40, 50])")
         st.code("Found at position 3", language="text")
         st.info("• Requires sorted array. Halves search interval each step in $\\mathcal{O}(\\log n)$.")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac10_interpolation.py`)")
         st.code(load_code("daa/prac10_interpolation.py"), language="python")
         st.subheader("📋 Output (Searching for 30 in [10, 20, 30, 40, 50])")
         st.code("Found at position 3", language="text")
         st.info("• Estimates target position using probe formula: `pos = low + (key - a[low])*(high - low)//(a[high] - a[low])`\n• Average Time Complexity: $\\mathcal{O}(\\log \\log n)$.")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac10_compare.py`)")
         st.code(load_code("daa/prac10_compare.py"), language="python")
         st.subheader("📋 Benchmark Output (1,000 Elements)")
         st.code(
@@ -1159,7 +1103,6 @@ Interpolation Position: 500 Time: 0.000004 sec""",
         st.info("Interpolation and Binary search are orders of magnitude faster on large sorted lists.")
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac10_searching.py`)")
         st.code(load_code("daa/prac10_searching.py"), language="python")
 
 
@@ -1188,35 +1131,30 @@ elif technique == "DAA Practical 11: AVL Tree Implementation & Rotations":
     ])
 
     with tab1:
-        st.subheader("💻 Python Source Code (`modules/daa/prac11_insert.py`)")
         st.code(load_code("daa/prac11_insert.py"), language="python")
         st.subheader("📋 Inorder Traversal Output (Keys: [30, 20, 10])")
         st.code("10 20 30", language="text")
         st.info("• Inorder traversal of an AVL tree produces sorted keys in $\\mathcal{O}(n)$ time.")
 
     with tab2:
-        st.subheader("💻 Python Source Code (`modules/daa/prac11_right_rotate.py`)")
         st.code(load_code("daa/prac11_right_rotate.py"), language="python")
         st.subheader("📋 Output (Right Rotate on 30 -> 20 -> 10)")
         st.code("New Root: 20", language="text")
         st.info("• LL imbalance is restored by rotating right around root 30; 20 becomes new root.")
 
     with tab3:
-        st.subheader("💻 Python Source Code (`modules/daa/prac11_left_rotate.py`)")
         st.code(load_code("daa/prac11_left_rotate.py"), language="python")
         st.subheader("📋 Output (Left Rotate on 10 -> 20 -> 30)")
         st.code("New Root: 20", language="text")
         st.info("• RR imbalance is restored by rotating left around root 10; 20 becomes new root.")
 
     with tab4:
-        st.subheader("💻 Python Source Code (`modules/daa/prac11_auto_balance.py`)")
         st.code(load_code("daa/prac11_auto_balance.py"), language="python")
         st.subheader("📋 Preorder Traversal Output (Balanced Tree)")
         st.code("20 10 30", language="text")
         st.info("• Root is 20 with left child 10 and right child 30, proving automatic balance!")
 
     with tab5:
-        st.subheader("💻 Complete Source Code (`modules/daa/prac11_avl_tree.py`)")
         st.code(load_code("daa/prac11_avl_tree.py"), language="python")
 
 
