@@ -21,111 +21,44 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom Error Theme CSS: Red text and error-style background
+# Custom Error Theme for Code Blocks ONLY
 st.markdown(
     """
     <style>
-    /* Main app error background */
-    .stApp {
-        background: radial-gradient(circle at 50% 10%, #3d090d 0%, #1c0305 60%, #0d0102 100%) !important;
-        color: #ff4d4f !important;
-    }
-
-    /* Sidebar styling for error theme */
-    [data-testid="stSidebar"] {
-        background-color: #160204 !important;
-        border-right: 1px solid #5c0d12 !important;
-    }
-
-    [data-testid="stSidebar"] * {
-        color: #ff6b6b !important;
-    }
-
-    /* Top header bar */
-    header[data-testid="stHeader"] {
-        background: transparent !important;
-    }
-
-    /* Headings */
-    h1, h2, h3, h4, h5, h6,
-    [data-testid="stMarkdownContainer"] h1,
-    [data-testid="stMarkdownContainer"] h2,
-    [data-testid="stMarkdownContainer"] h3 {
-        color: #ff2b2b !important;
-        text-shadow: 0 0 10px rgba(255, 43, 43, 0.4);
-    }
-
-    /* Body and markdown text */
-    p, span, label, li,
-    div[data-testid="stMarkdownContainer"] p,
-    div[data-testid="stMarkdownContainer"] span {
-        color: #ff6b6b !important;
-    }
-
-    /* Code blocks: dark error container with red glowing border & red font */
-    [data-testid="stCodeBlock"], pre, code {
-        background-color: #240507 !important;
-        color: #ff8585 !important;
-        border: 1px solid #821019 !important;
+    /* Error-style background and red text for Code Blocks ONLY */
+    [data-testid="stCodeBlock"] {
+        background-color: #2b0b0e !important;
+        border: 1.5px solid #dc3545 !important;
         border-radius: 8px !important;
-        box-shadow: 0 0 12px rgba(220, 38, 38, 0.2) !important;
+        box-shadow: 0 0 15px rgba(220, 53, 69, 0.25) !important;
     }
 
-    code span {
-        color: #ffa39e !important;
+    [data-testid="stCodeBlock"] pre {
+        background-color: #2b0b0e !important;
     }
 
-    /* Alert / Info boxes made to look like error banners */
-    [data-testid="stAlert"] {
-        background-color: #3b090d !important;
-        color: #ff7875 !important;
-        border: 1px solid #b71520 !important;
-        border-left: 5px solid #ff2b2b !important;
-        box-shadow: 0 2px 8px rgba(255, 0, 0, 0.25) !important;
+    [data-testid="stCodeBlock"] code,
+    [data-testid="stCodeBlock"] code span,
+    [data-testid="stCodeBlock"] pre code,
+    [data-testid="stCodeBlock"] pre code span {
+        color: #ff4d4f !important;
+        -webkit-text-fill-color: #ff4d4f !important;
     }
 
-    /* Selectbox and dropdowns */
-    div[data-baseweb="select"] > div {
-        background-color: #260508 !important;
-        border: 1px solid #a81721 !important;
-        color: #ff6b6b !important;
-        box-shadow: 0 0 8px rgba(255, 77, 79, 0.3) !important;
-    }
-
-    div[data-baseweb="select"] * {
+    /* Copy button inside code block */
+    [data-testid="stCodeBlock"] button {
         color: #ff7875 !important;
     }
-
-    ul[role="listbox"] {
-        background-color: #260508 !important;
-        border: 1px solid #a81721 !important;
+    [data-testid="stCodeBlock"] button:hover {
+        color: #ff4d4f !important;
+        background-color: #441116 !important;
     }
 
-    li[role="option"] {
-        color: #ff7875 !important;
-    }
-
-    li[role="option"]:hover {
-        background-color: #4a0d13 !important;
-    }
-
-    /* Buttons */
-    button, button[kind="primary"], button[kind="secondary"] {
-        background-color: #5c0d12 !important;
-        color: #ffffff !important;
-        border: 1px solid #ff4d4f !important;
-        box-shadow: 0 0 8px rgba(255, 77, 79, 0.4) !important;
-    }
-
-    button:hover {
-        background-color: #821019 !important;
-        box-shadow: 0 0 14px rgba(255, 77, 79, 0.7) !important;
-    }
-
-    /* Dataframe & tables */
-    [data-testid="stDataFrame"], .stTable {
-        background-color: #240507 !important;
-        border: 1px solid #781018 !important;
+    /* Inline code badges */
+    code:not(pre code) {
+        background-color: #3b0e12 !important;
+        color: #ff4d4f !important;
+        border: 1px solid #78151c !important;
     }
     </style>
     """,
